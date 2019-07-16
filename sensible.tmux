@@ -1,5 +1,13 @@
 #!/usr/bin/env bash
 
+# Use C-a
+set -g prefix C-a
+unbind-key C-b
+bind-key C-a send-prefix
+
+# Change repetition time-out
+set-option -g repeat-time 0
+
 CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 # used to match output from `tmux list-keys`
