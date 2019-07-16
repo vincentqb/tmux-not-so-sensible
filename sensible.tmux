@@ -8,6 +8,9 @@ bind-key C-a send-prefix
 # Change repetition time-out
 set-option -g repeat-time 0
 
+# Remove alt key from binding
+set -g @tpm-clean 'u'
+
 CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 # used to match output from `tmux list-keys`
